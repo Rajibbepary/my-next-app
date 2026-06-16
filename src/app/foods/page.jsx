@@ -1,3 +1,4 @@
+import FoodCard from "@/components/FoodCard";
 import { foods } from "../../../public/assects";
 
 const FoodPage = () => {
@@ -5,13 +6,12 @@ const FoodPage = () => {
 const allFood = foods || []
 
     return (
-        <div>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 mt-6">
             {
                 allFood.map((food)=>(
-                    <h1 key={food.id}>{food.title}</h1>
+                    <FoodCard key={food.id} food={food}></FoodCard>
                 ))
             }
-            <h1>Foods page</h1>
         </div>
     );
 };
