@@ -1,4 +1,5 @@
 import React from "react";
+import CardButton from "./button/CardButton";
 
 const FoodCard = ({ food }) => {
   return (
@@ -27,9 +28,7 @@ const FoodCard = ({ food }) => {
             ${food.price}
           </p>
 
-          <button className="rounded-lg bg-orange-500 px-4 py-2 font-medium text-white transition hover:bg-orange-600">
-            Add to Cart
-          </button>
+          <CardButton></CardButton>
         </div>
       </div>
     </div>
